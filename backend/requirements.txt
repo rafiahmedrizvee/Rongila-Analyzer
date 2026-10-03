@@ -1,0 +1,20 @@
+# Pinned to the exact versions used to build the dataset and train
+# trained_models/skin_tone_model.joblib. numpy/scikit-learn/joblib in
+# particular MUST stay close to these — scikit-learn pickles (especially
+# tree-based models like RandomForestClassifier) are version-sensitive,
+# and loading this model with a different scikit-learn version can fail
+# or misbehave silently.
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.32,<1.0
+python-multipart>=0.0.12,<0.1
+pydantic>=2.9,<3.0
+pydantic-settings>=2.6,<3.0
+Pillow>=12.0,<13.0
+numpy>=2.4,<3.0
+opencv-python-headless>=4.13,<5.0
+scikit-learn==1.8.0
+joblib==1.5.3
+
+# Only needed if you run the optional Phase 9 upgrade path
+# (scripts/train_cnn_mobilenetv2.py) on a machine with more data:
+# tensorflow==2.17.0

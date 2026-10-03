@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-paper text-ink font-body antialiased;
+}
+
+::selection {
+  @apply bg-accent-tint text-accent-dark;
+}
+
+:focus-visible {
+  outline: 2px solid #1F6F5C;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.container-page {
+  @apply mx-auto w-full max-w-6xl px-6 sm:px-8;
+}
+
+/* The eight-swatch scale strip — the app's recurring structural motif */
+.swatch-strip {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  border-radius: 10px;
+  overflow: hidden;
+}
+.swatch-strip > span {
+  height: 100%;
+  width: 100%;
+}

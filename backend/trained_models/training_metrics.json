@@ -1,0 +1,123 @@
+{
+  "method": "GradientBoostingClassifier (max_depth=2) on 3-dim [L_med, a_med, b_med] feature vector",
+  "cv_folds": 4,
+  "cv_macro_f1": 0.968,
+  "cv_weighted_f1": 0.973,
+  "cv_exact_accuracy": 0.973,
+  "cv_off_by_one_accuracy": 1.0,
+  "n_train": 29,
+  "n_validation": 8,
+  "n_test": 8,
+  "test_accuracy": 0.875,
+  "confusion_matrix_labels": [
+    "very_fair",
+    "fair",
+    "light",
+    "medium",
+    "olive",
+    "tan",
+    "brown",
+    "deep"
+  ],
+  "confusion_matrix": [
+    [
+      5,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      5,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      5,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      5,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      5,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      4,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      4,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      3
+    ]
+  ],
+  "live_pipeline_full_dataset": {
+    "note": "Fresh end-to-end run (face detection -> segmentation -> normalization -> features -> model) on all 45 raw source photos, not precomputed CSV features. Includes train/val/test images together as a full-pipeline sanity check.",
+    "exact_accuracy": 0.956,
+    "off_by_one_accuracy": 1.0,
+    "misses": [
+      {
+        "file": "IMG-20260904-WA0017.jpg",
+        "true": "fair",
+        "pred": "light",
+        "split": "test"
+      },
+      {
+        "file": "IMG-20260904-WA0034.jpg",
+        "true": "brown",
+        "pred": "tan",
+        "split": "test"
+      }
+    ]
+  }
+}
